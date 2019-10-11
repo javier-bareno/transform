@@ -42,13 +42,21 @@ vol= 0.0223
 alpha= 90.00    beta= 90.00     gamma= 90.00
 ```
 
-To tranform coordinates between bases, just transform to and from cartessian. For example:
+To tranform coordinates between bases, just transform to and from cartessian. For example, to find that the (1, 1, 0) primitive plane corresponds to the (2, 0, 0) conventional plane, type:
 
 ```python
 rock_salt.plane_from_cart(primitive.plane_to_cart(np.array([1,1,0])))
 
 array([ 2.00000000e+00, -3.40823177e-17, -3.40823177e-17])
+```
 
+And to verify that the interplanar distances are the same:
+
+```python
+primitive.plane_dist(np.array([1,1,0]))
+Out: 2.8201
+rock_salt.plane_dist(np.array([2,0,0]))
+Out: 2.8201
 ```
 
 Finally, the derived class Hexag is specialized to hexagnal unit cells. It includes additional methods to work with directions and planes in 4-coordinate notation.
