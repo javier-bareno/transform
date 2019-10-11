@@ -1,5 +1,5 @@
 # transform
-Python2 module for crystallographic transformations.
+Python modules for crystallographic transformations. transform and transform3 are written in Python 2 and 3, respectively.
 
 transform defines the UCell class, which represents a Bravais lattice by its basis vectors. This can be done by secifying the lattice parametters (a, b, c, alpha, beta, gamma) in the constructor, or by passing specific basis vectors to the UCell.from_basis_vectors method. Upon instance creation, UCell willl calculate the reciprocal basis vectors.
 
